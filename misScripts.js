@@ -6,7 +6,7 @@ xhr.responseType='json';
 xhr.onload=function(){
     if(xhr.status===200){
         datosJson=xhr.response;
-        let elementoDiv=document.getElementById("legacy");
+        let elementoDiv=document.getElementById("contenedor");
         elementoDiv.textContent=datosJson.profesión;
     }
 }
@@ -17,7 +17,7 @@ fetch("datos.json")
 .then((salida)=>{
     datosJson=salida;
 
-    let elementoDiv=document.getElementById("legacy");
+    let elementoDiv=document.getElementById("contenedor");
     elementoDiv.textContent=datosJson.apellidos; //Se extraen los apellidos del código .json
 
 })
