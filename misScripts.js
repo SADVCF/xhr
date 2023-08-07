@@ -20,4 +20,7 @@ fetch("datos.json")
     let elementoDiv=document.getElementById("contenedor");
     elementoDiv.textContent=datosJson.apellidos; //Se extraen los apellidos del código .json
 
+})//Captura de cualquier error mostrándolo en alerta
+.catch(function(error){
+    alert(error);
 })
